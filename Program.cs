@@ -2,6 +2,15 @@
 Console.WriteLine("Hello, World!");
 
 
+var poderVolar = new SuperPoder();
+poderVolar.Nombre = "Volar";
+poderVolar.Descripcion = "Capácidad para volar y planear en el aire";
+poderVolar.Nivel = NivelPoder.NivelDos;
+
+var superFuerza = new SuperPoder();
+superFuerza.Nombre = "Super fuerza";
+superFuerza.Nivel = NivelPoder.NivelTres;
+
 var superman = new SuperHeroe();
 
 superman.id = 1;
@@ -9,7 +18,7 @@ superman.Nombre = "Superman";
 superman.IdentidadSecreta = "Clark kent";
 superman.Ciudad = "Metropolis";
 superman.PuedeVolar = true;
-superman.SuperPoderes = new []{"Vision de rayos X", "Volar", "Super fuerza", "Ojos rayos lazer"};
+List<SuperPoder> poderesSuperman = new List<SuperPoder>();
 
  //Las clases se declaran de forma singular para referirnos a UNA clase, amenos que sea una lista
 class SuperHeroe
@@ -19,7 +28,7 @@ class SuperHeroe
     public string Nombre;
     public string IdentidadSecreta;
     public string Ciudad;
-    public string[] SuperPoderes; 
+    public List<SuperPoder> SuperPoderes; 
     public bool PuedeVolar;
 }
 
